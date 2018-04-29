@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2016 5:29:54 AM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="neu.edu.entity.AdminTable" table="AdminTable" catalog="BestBuyDB" optimistic-lock="version">
+        <id name="adminId" type="int">
+            <column name="adminId" />
+            <generator class="assigned" />
+        </id>
+        <property name="usertype" type="string">
+            <column name="usertype" length="100" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="100" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="100" not-null="true" />
+        </property>
+        <property name="personid" type="int">
+            <column name="personid" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

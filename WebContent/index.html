@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="//code.angularjs.org/1.5.8/angular.js"></script>
+<script src="//code.angularjs.org/1.5.8/angular-route.js"></script>
+<script src="//code.angularjs.org/1.5.8/angular-cookies.js"></script>
+<script src="//code.angularjs.org/1.5.8/angular-sanitize.js"></script>
+
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.3.0.js"></script>
+
+ 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-default" ng-controller="applicationContoller"
+		ng-init="init()">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<div class="navbar-brand">INFO -6250 - Welcome
+					{{userSession.username}}</div>
+			</div>
+			<!--  
+			<div id="custMenu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#dashboard"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#skill"><i class="fa fa-shield"></i> About</a></li>
+					<li><a href="#personal"><i class="fa fa-comment"></i>Contact</a></li>
+				</ul>
+			</div>
+			<div id="merchantMenu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#dashboard"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#skill"><i class="fa fa-shield"></i> About</a></li>
+					<li><a href="#personal"><i class="fa fa-comment"></i>Contact</a></li>
+				</ul>
+			</div>
+			-->
+			<div id="guest">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#login"><i class="fa fa-comment"></i>Login</a></li>
+					<li><a href="#registration"><i class="fa fa-comment"></i>Register</a></li>
+				</ul>
+			</div>
+			<div id="logout">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#logout"><i class="fa fa-comment"></i>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<div class="col-xs-offset-2 col-xs-8">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/app.js"></script><!--Registration Module -->
+	<script type="text/javascript" src="js/app-router.js"></script><!--Navigation and APP LEVEL config Module -->
+	<script type="text/javascript" src="js/app-const.js"></script><!--Application Const. -->
+	<script type="text/javascript" src="js/app-component.js"></script><!--Application Compnents. -->
+	
+	
+	<script type="text/javascript" src="js/app.module.js"></script>
+	<script type="text/javascript" src="js/auth.module.js"></script>
+	
+	<script type="text/javascript" src="js/welcome.module.js"></script>
+	<script type="text/javascript" src="js/registration.module.js"></script>
+	<script type="text/javascript" src="js/dashboard.module.js"></script>
+	<script type="text/javascript" src="js/resume.module.js"></script>
+	
+	<script type="text/javascript" src="js/admin.module.js"></script>
+	<script type="text/javascript" src="js/adminActions.module.js"></script>
+	
+	<script type="text/javascript" src="js/seller.module.js"></script>
+	<script type="text/javascript" src="js/sellerActions.module.js"></script>
+	
+	<script type="text/javascript" src="js/customer.module.js"></script>
+	<script type="text/javascript" src="js/customerActions.module.js"></script>
+	
+	<script type="text/javascript" src="js/productDisplay.module.js"></script>
+	<script type="text/javascript" src="js/productDashboardDisplay.module.js"></script>
+	
+	<script type="text/javascript" src="js/base.module.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<div class='container'>
+	<div class='panel panel-primary dialog-panel'>
+		<div class='panel-heading'>
+			<h5>Add Product</h5>
+		</div>
+		<div class='panel-body'>
+			<form class='form-horizontal' role='form'>
+				<div class="form-group">
+
+					<div ng-show="sellerActionsCtrl.error" align="center"
+						class="col-sm-offset-4 col-sm-3 alert alert-danger">{{sellerActionsCtrl.message}}</div>
+
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_title'>Model No</label>
+					<div class='col-md-8'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_modelNo'
+									ng-model="sellerActionsCtrl.productdetails.modelNo"
+									placeholder='ModelNo' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_category1'>Category</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_category'
+									ng-model="sellerActionsCtrl.productdetails.category"
+									placeholder='Category' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_name1'>Name</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_name'
+									ng-model="sellerActionsCtrl.productdetails.name"
+									placeholder='Name' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_price1'>Price</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_price' type="number"
+									ng-model="sellerActionsCtrl.productdetails.price"
+									placeholder='Price' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_color1'>Color</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_color'
+									ng-model="sellerActionsCtrl.productdetails.color"
+									placeholder='Color' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<div class='col-md-offset-4 col-md-3'>
+						<button class='btn btn-primary' ng-click="sellerActionsCtrl.add()"
+							type='submit'>Add</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-3">
+						<button type="submit" ng-click="sellerActionsCtrl.goBack()"
+						class="btn btn-default">Back</button>
+					</div>
+				</div>	
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+
+<div class="page-header" ng-init="customerActionsCtrl.initMethod()">
+	<div ng-show="{{error}}"></div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Product Id</th>
+				<th>Model No</th>
+				<th>Category</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Color</th>
+			</tr>
+			<tr ng-repeat="products in customerActionsCtrl.items">
+				<td>{{products.productId}}</td>
+				<td>{{products.modelNo}}</td>
+				<td>{{products.category}}</td>
+				<td>{{products.name}}</td>
+				<td>{{products.price}}</td>
+				<td>{{products.color}}</td>
+				<td><a ng-click="customerActionsCtrl.removeItem(products)"
+					class="btn btn-primary">Remove Item</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="customerActionsCtrl.goBack()"
+				class="btn btn-default">Back</button>
+		</div>
+	</div>
+</div>

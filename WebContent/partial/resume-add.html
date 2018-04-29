@@ -1,0 +1,31 @@
+<div class="form-group">
+	<label for="name" class="col-md-2 control-label">Resume Name</label>
+	<div class="col-md-10">
+		<input type="text" ng-model="resume.name" class="form-control"
+			id="name" placeholder="Resume Name" />
+	</div>
+</div>
+<div class="form-group">
+	<label for="description" class="col-md-2 control-label">Resume Description</label>
+	<div class="col-md-10">
+		<input type="text" ng-model="movie.description" class="form-control"
+			id="description" placeholder="Description" />
+	</div>
+</div>
+<div class="form-group">
+	<label for="creationDate" class="col-md-2 control-label">Creation Date</label>
+	<div class="col-md-10">
+		<input type="text" ng-disabled="true" ng-model="resume.creationDate" class="form-control"
+			id="creationDate" />
+	</div>
+</div>
+
+
+<div class="form-group">
+	<div class="col-md-offset-5 col-md-1"  style="padding-top: 20px;">
+		<input type="submit" class="btn btn-primary" value="Back" ng-click="back()" />
+	</div>
+	<div class="col-md-1"  style="padding-top: 20px;">
+		<input type="submit" class="btn btn-primary" value="Save" ng-click="save()"/>
+	</div>
+</div>

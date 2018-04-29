@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2016 5:29:54 AM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="neu.edu.entity.AddressTable" table="AddressTable" catalog="BestBuyDB" optimistic-lock="version">
+        <id name="addressId" type="int">
+            <column name="addressId" />
+            <generator class="assigned" />
+        </id>
+        <property name="addressLine1" type="string">
+            <column name="addressLine1" length="100" />
+        </property>
+        <property name="addressLine2" type="string">
+            <column name="addressLine2" length="100" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="100" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="100" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="zipcode" length="100" />
+        </property>
+        <property name="customerId" type="java.lang.Integer">
+            <column name="customerId" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,149 @@
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+
+<div class='container'>
+	<div class='panel panel-primary dialog-panel'>
+		<div class='panel-heading'>
+			<h5>Add New Seller</h5>
+		</div>
+		<div class='panel-body'>
+			<form class='form-horizontal' role='form'>
+				<div class="form-group">
+
+					<div ng-show="adminActionsCtrl.error" align="center"
+						class="col-sm-offset-4 col-sm-3 alert alert-danger">{{adminActionsCtrl.message}}</div>
+
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_title'>Name</label>
+					<div class='col-md-8'>
+						<div class='col-md-2'>
+							<div class='form-group internal'>
+								<select class='form-control' id='id_title'
+									ng-model="adminActionsCtrl.registration.title" required>
+									<option>Mr</option>
+									<option>Ms</option>
+									<option>Mrs</option>
+									<option>Miss</option>
+									<option>Dr</option>
+								</select>
+							</div>
+						</div>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_first_name'
+									ng-model="adminActionsCtrl.registration.firstName"
+									placeholder='First Name' type='text' required>
+							</div>
+						</div>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_last_name'
+									ng-model="adminActionsCtrl.registration.lastName"
+									placeholder='Last Name' type='text' required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_email'>Username</label>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<div class='col-md-11'>
+								<input class='form-control' id='id_username'
+									placeholder='Username' ng-model="adminActionsCtrl.registration.username"
+									type='text' required>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_email'>Password</label>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<div class='col-md-11'>
+								<input class='form-control' id='id_password' required
+									placeholder='Password' ng-model="adminActionsCtrl.registration.password"
+									type='password' >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_email'>Contact</label>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<div class='col-md-11'>
+								<input required class='form-control' id='id_email' placeholder='E-mail'
+									ng-model="adminActionsCtrl.registration.email" type='text' >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_email'>Date of Birth</label>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<div class='col-md-11'>
+								<p class="input-group">
+									<input type="text" class="form-control" required
+										uib-datepicker-popup="{{adminActionsCtrl.dobOptions.format}}"
+										ng-model="adminActionsCtrl.registration.dateOfBirth"
+										is-open="adminActionsCtrl.dobOptions.popup"
+										datepicker-options="adminActionsCtrl.dateOptions" required
+										close-text="Close"
+										alt-input-formats="adminActionsCtrl.dobOptions.altInputFormats" /> <span
+										class="input-group-btn">
+										<button type="button" class="btn btn-default"
+											ng-click="adminActionsCtrl.open()" >
+											<i class="glyphicon glyphicon-calendar"></i>
+										</button>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_equipment'>Occupation Type</label>
+					<div class='col-md-8'>
+						<div class='col-md-3'>
+							<div class='form-group internal'>
+								<select class='form-control' id='id_occupation'
+									ng-model="adminActionsCtrl.registration.occupationType" required>
+									<option>IT/Software</option>
+									<option>Management</option>
+									<option>Legal</option>
+									<option>Life Science</option>
+									<option>HealthCare</option>
+									<option>Sales</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<div class='col-md-offset-4 col-md-3'>
+						<button class='btn btn-primary' ng-click="adminActionsCtrl.register()" 
+							type='submit'>Register</button>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class='col-sm-offset-4 col-sm-3'>
+						<button class='btn btn-danger' ng-click="adminActionsCtrl.cancel()"
+							style='float: center' type='submit'>Back</button>
+					</div>

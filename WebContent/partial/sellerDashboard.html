@@ -1,0 +1,31 @@
+<form class="form-horizontal" ng-controller="sellerController">
+
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="sellerCtrl.viewProducts()"
+				class="btn btn-default">View All Products</button>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="sellerCtrl.addProducts()"
+				class="btn btn-default">Add new Product</button>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="sellerCtrl.viewOrders()"
+				class="btn btn-default">View Orders</button>
+		</div>
+	</div>
+
+
+	<div class="form-group">
+
+		<div ng-show="sellerCtrl.error" align="center"
+			class="col-sm-offset-2 col-sm-2 alert alert-danger">{{sellerCtrl.message}}</div>
+
+	</div>
+</form>

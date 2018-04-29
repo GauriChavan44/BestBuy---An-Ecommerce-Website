@@ -1,0 +1,64 @@
+<div class="page-header" ng-init="productCtrl.showProducts()">
+	<div ng-show="{{error}}">
+		{{message}}
+	</div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Product Id</th>
+				<th>Model No</th>
+				<th>Category</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Color</th>
+			</tr>
+			<tr ng-repeat="products in productCtrl.showproduct">
+				<td>{{products.productId}}</td>
+				<td>{{products.modelNo}}</td>
+				<td>{{products.category}}</td>
+				<td>{{products.name}}</td>
+				<td>{{products.price}}</td>
+				<td>{{products.color}}</td>
+		<!-- 	<input type="hidden" ng-model = "productCtrl.showproduct.productId" ng-value="{{products.productId}}">
+				<input type="hidden" ng-model = "productCtrl.showproduct.modelNo" ng-value="{{products.modelNo}}">
+				<input type="hidden" ng-model = "productCtrl.showproduct.category" ng-value="{{products.category}}">
+				<input type="hidden" ng-model = "productCtrl.showproduct.name" ng-value="{{products.name}}">
+				<input type="hidden" ng-model = "productCtrl.showproduct.price" ng-value="{{products.price}}">
+				<input type="hidden" ng-model = "productCtrl.showproduct.color" ng-value="{{products.color}}"> -->	
+				<td><a ng-click="productCtrl.addToCart(products)"
+					class="btn btn-primary">Add to Cart</a></td>
+			</tr>
+		</table>
+		<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="productCtrl.goBack()"
+				class="btn btn-default">Back</button>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- 
+<div class="page-header" ng-init="productCtrl.showProducts()">
+	<div ng-show="{{error}}">
+		{{message}}
+	</div>
+	<div class="table-responsive">
+	
+	<h3 ng-repeat="products in productCtrl.showproduct">
+	<a href="#product-information"><i class="fa fa-comment"></i>
+	{{products.name}} - {products.productId}</a>
+	</h3>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="productCtrl.goBack()"
+				class="btn btn-default">Back</button>
+		</div>
+	</div>
+</div>
+
+
+
+ -->
+

@@ -1,0 +1,28 @@
+
+<div class="page-header" ng-init="customerActionsCtrl.initMethodGetOrders()">
+	<div ng-show="{{error}}">
+		{{message}}
+	</div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Order Id</th>
+				<th>Status</th>
+				<th>Seller Id</th>
+				<th>Customer Id</th>
+			</tr>
+			<tr ng-repeat="order in customerActionsCtrl.orders">
+				<td>{{order.orderId}}</td>
+				<td>{{order.status}}</td>
+				<td>{{order.sellerId}}</td>
+				<td>{{order.customerId}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="customerActionsCtrl.goBack()"
+				class="btn btn-default">Back</button>
+		</div>
+	</div>
+</div>

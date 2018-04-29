@@ -1,0 +1,44 @@
+<form class="form-horizontal" ng-controller="adminController">
+
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminCtrl.viewCustomer()"
+				class="btn btn-default">View All Customers</button>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminCtrl.viewSeller()"
+				class="btn btn-default">View All Sellers</button>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminCtrl.addSeller()"
+				class="btn btn-default">Add New Seller</button>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminCtrl.disableUser()"
+				class="btn btn-default">Disable User</button>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminCtrl.enableUser()"
+				class="btn btn-default">Enable User</button>
+		</div>
+	</div>
+
+	<div class="form-group">
+
+		<div ng-show="adminCtrl.error" align="center"
+			class="col-sm-offset-2 col-sm-2 alert alert-danger">{{adminCtrl.message}}</div>
+
+	</div>
+</form>

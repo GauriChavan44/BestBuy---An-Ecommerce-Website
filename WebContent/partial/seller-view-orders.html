@@ -1,0 +1,32 @@
+<div class="page-header"
+	ng-init="sellerActionsCtrl.initMethodGetOrders()">
+	<div ng-show="{{error}}">{{message}}</div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Order Id</th>
+				<th>Status</th>
+				<th>Seller Id</th>
+				<th>Customer Id</th>
+			</tr>
+			<tr ng-repeat="order in sellerActionsCtrl.orders">
+				<td>{{order.orderId}}</td>
+				<td>{{order.status}}</td>
+				<td>{{order.sellerId}}</td>
+				<td>{{order.customerId}}</td>
+				<td><a ng-click="sellerActionsCtrl.changeStatus(order)"
+					class="btn btn-primary">Mark status as Shipped</a></td>
+
+				<td><a ng-click="sellerActionsCtrl.sendEmail(order.customerId)"
+					class="btn btn-primary">Email Customer</a></td>
+			</tr>
+			</tr>
+		</table>
+		<div class="form-group">
+			<div class="col-sm-offset-4 col-sm-2">
+				<button type="submit" ng-click="sellerActionsCtrl.goBack()"
+					class="btn btn-default">Back</button>
+			</div>
+		</div>
+	</div>
+</div>

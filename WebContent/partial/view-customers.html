@@ -1,0 +1,28 @@
+
+<div class="page-header" ng-init="adminActionsCtrl.customerInitMethod()">
+	<div ng-show="{{error}}">
+		{{message}}
+	</div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Customers Id</th>
+				<th>Usertype</th>
+				<th>Username</th>
+				<th>Status</th>
+			</tr>
+			<tr ng-repeat="customers in adminActionsCtrl.customers">
+				<td>{{customers.customerId}}</td>
+				<td>{{customers.usertype}}</td>
+				<td>{{customers.username}}</td>
+				<td>{{customers.status}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="adminActionsCtrl.goBack()"
+				class="btn btn-default">Back</button>
+		</div>
+	</div>
+</div>

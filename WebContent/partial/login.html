@@ -1,0 +1,30 @@
+<form class="form-horizontal" ng-init="authCtrl.clearCredentials()">
+	<div class="form-group">
+		<label for="username" class="col-sm-2 control-label">Username</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" placeholder="username"
+				id="username" ng-model="authCtrl.credentials.username" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="password" class="col-sm-2 control-label">Password</label>
+		<div class="col-sm-6">
+			<input type="password" class="form-control" placeholder="password"
+				id="password" ng-model="authCtrl.credentials.password" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-4 col-sm-2">
+			<button type="submit" ng-click="authCtrl.login()"
+				class="btn btn-default">Login</button>
+		</div>
+	</div>
+
+	<div class="form-group">
+
+		<div ng-show="authCtrl.error" align="center"
+			class="col-sm-offset-2 col-sm-2 alert alert-danger">{{authCtrl.message}}</div>
+
+	</div>
+</form>

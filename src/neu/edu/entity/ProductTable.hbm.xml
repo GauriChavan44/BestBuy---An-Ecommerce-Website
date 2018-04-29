@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2016 5:29:54 AM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="neu.edu.entity.ProductTable" table="ProductTable" catalog="BestBuyDB" optimistic-lock="version">
+        <id name="productId" type="int">
+            <column name="productId" />
+            <generator class="assigned" />
+        </id>
+        <property name="modelNo" type="string">
+            <column name="modelNo" length="100" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="100" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="100" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="price" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="100" />
+        </property>
+        <property name="sellerId" type="java.lang.Integer">
+            <column name="sellerId" />
+        </property>
+    </class>
+</hibernate-mapping>

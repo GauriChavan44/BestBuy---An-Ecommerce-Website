@@ -1,0 +1,109 @@
+<div class='container' ng-controller="sellerActionsController">
+	<div class='panel panel-primary dialog-panel'>
+		<div class='panel-heading'>
+			<h5>Enter Payment Details</h5>
+		</div>
+		<div class='panel-body'>
+			<form class='form-horizontal' role='form'>
+				<div class="form-group">
+
+				<div ng-show="customerActionsCtrl.error" align="center"
+						class="col-sm-offset-4 col-sm-3 alert alert-danger">{{customerActionsCtrl.message}}</div>
+
+				</div>
+				
+					
+				<div class='form-group'>
+					<h3><label class='control-label col-md-3 col-md-offset-4'
+						for='id_title'>Total is ${{customerActionsCtrl.getTotal()}}</label></h3>
+					
+				</div>	
+						
+						
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_title'>Card Type</label>
+					<div class='col-md-8'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_cardType'
+									ng-model="customerActionsCtrl.cardDetails.cardType"
+									placeholder='Card Type' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_category1'>Card Number</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_cardNumber'
+									ng-model="customerActionsCtrl.cardDetails.cardNumber"
+									placeholder='Card Number' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_name1'>Name on Card</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_nameOnCard'
+									ng-model="customerActionsCtrl.cardDetails.nameOnCard"
+									placeholder='Name on Card' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_price1'>Expiry Date</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_expiryDate'
+									ng-model="customerActionsCtrl.cardDetails.expiryDate"
+									placeholder='Expiry Date' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<label class='control-label col-md-2 col-md-offset-2'
+						for='id_price1'>CVV</label>
+					<div class='col-md-6'>
+						<div class='col-md-3 indent-small'>
+							<div class='form-group internal'>
+								<input class='form-control' id='id_cvv'
+									ng-model="customerActionsCtrl.cardDetails.cvv"
+									placeholder='CVV' type='text'>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='form-group'>
+					<div class='col-md-offset-4 col-md-3'>
+						<button class='btn btn-primary'
+							ng-click="customerActionsCtrl.pay()" type='submit'>Pay</button>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-3">
+						<button type="submit" ng-click="customerActionsCtrl.goBack()"
+							class="btn btn-default">Back</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

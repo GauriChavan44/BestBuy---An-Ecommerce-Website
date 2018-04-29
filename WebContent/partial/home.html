@@ -1,0 +1,44 @@
+<!-- <header>
+	<nav class="navbar navbar-default">`
+		<div class="container">
+			<div class="navbar-header">
+				<h4>{{'Welcome '+userSession.username}}</h4>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#dashboard"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#skill"><i class="fa fa-shield"></i> About</a></li>
+				<li><a href="#personal"><i class="fa fa-comment"></i>Contact</a></li>
+				<li><a href="#logout"><i class="fa fa-comment"></i>Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+</header> -->
+
+ <p>
+ 	<a ng-click="addResume()"  class="btn btn-primary">
+ 	Add New Resume</a></p>
+
+
+<div class="page-header" ng-init="init()">
+	<div ng-show="{{error}}">
+		{{message}}
+	</div>
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr class="table-heading">
+				<th>Name</th>
+				<th>Description</th>
+				<th>Creation Date</th>
+				<th>Operation</th>
+			</tr>
+			<tr ng-repeat="resume in resumes">
+				<td>{{resume.name}}</td>
+				<td>{{resume.desc}}</td>
+				<td>{{resume.dateOfCreation}}</td>
+				<td><a ng-click="viewResume({id:resume})"
+					class="btn btn-primary"> View Resume</a>
+			</tr>
+		</table>
+	</div>
+</div>

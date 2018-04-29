@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 15, 2016 5:29:54 AM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="neu.edu.entity.OrderProductTable" table="OrderProductTable" catalog="BestBuyDB" optimistic-lock="version">
+        <id name="orderProductTableId" type="int">
+            <column name="orderProductTableId" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderId" type="int">
+            <column name="orderId" not-null="true" />
+        </property>
+        <property name="productId" type="int">
+            <column name="productId" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
